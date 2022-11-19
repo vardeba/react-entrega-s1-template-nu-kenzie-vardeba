@@ -8,7 +8,7 @@ main {
 
 /* aside */
 
-form {
+/* form {
     display: flex;
     flex-direction: column;
     width: 22.6875rem;
@@ -16,17 +16,17 @@ form {
     border-radius: var(--radius);
     padding: 2.375rem 1.5rem;
     margin-bottom: 1rem;
-}
+} */
 
-form label {
+/* form label {
     font-size: var(--title-4);
     font-weight: var(--font-weight-4);
     line-height: var(--line-height);
     color: var(--gray-4);
     margin-bottom: 0.75rem;
-}
+} */
 
-.inputDescription {
+/* .inputDescription {
     height: var(--input-select-height-1);
     font-size: var(--headline);
     font-weight: var(--font-weight-4);
@@ -37,30 +37,30 @@ form label {
     background-color: var(--gray-1);
     border: 0.125rem solid var(--gray-1);
     border-radius: var(--radius);
-}
+} */
 
-.exemple {
+/* .exemple {
     font-size: var(--body);
     font-weight: var(--font-weight-4);
     line-height: var(--line-height);
     color: var(--gray-3);
     margin-bottom: 1rem;
-}
+} */
 
-.valueTypeOfValue {
+/* .valueTypeOfValue {
     display: flex;
     gap: 2.25rem;
     margin-bottom: 1.25rem;
-}
+} */
 
-.valueLabelInput {
+/* .valueLabelInput {
     width: 8rem;
     height: 4.9375rem;
     display: flex;
     flex-direction: column;
-}
+} */
 
-.valueLabelInput input {
+/* .valueLabelInput input {
     height: var(--input-select-height-2);
     padding-left: 1rem;
     background-color: var(--gray-1);
@@ -69,16 +69,16 @@ form label {
     font-size: var(--headline);
     font-weight: var(--font-weight-4);
     color: var(--gray-3);
-}
+} */
 
-.typeOfValue {
+/* .typeOfValue {
     width: 8rem;
     height: 4.9375rem;
     display: flex;
     flex-direction: column;
-}
+} */
 
-.typeOfValue select {
+/* .typeOfValue select {
     height: var(--input-select-height-2);
     padding: 0 1rem;
     background-color: var(--gray-1);
@@ -88,7 +88,9 @@ form label {
     font-weight: var(--font-weight-4);
     color: var(--gray-4);
     cursor: pointer;
-}
+} */
+
+/* total container */
 
 .totalContainer {
     width: 22.6875rem;

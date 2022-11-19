@@ -12,7 +12,10 @@ export const App = () => {
     return (
         <div className="App">
             <div className="App-header">
-                <HomePage />
+                <HomePage
+                    listTransactions={listTransactions}
+                    setListTransactions={setListTransactions}
+                />
             </div>
         </div>
     );

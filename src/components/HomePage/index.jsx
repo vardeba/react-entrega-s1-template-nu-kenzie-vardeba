@@ -3,14 +3,19 @@ import { Header } from "./Header";
 import "../../index.css";
 import "../../styles/buttons.css";
 import "./styles.css";
+import { Form } from "../Form";
 
-export const HomePage = () => {
+export const HomePage = ({ listTransactions, setListTransactions }) => {
     return (
         <div className="homePageContainer">
             <Header />
             <main className="mainContainer container">
                 <aside>
-                    <form>
+                    <Form
+                        listTransactions={listTransactions}
+                        setListTransactions={setListTransactions}
+                    />
+                    {/* <form>
                         <label htmlFor="">Descrição</label>
                         <input
                             className="inputDescription"
@@ -36,7 +41,7 @@ export const HomePage = () => {
                         <button className="insertValue btn_primary_large">
                             Inserir valor
                         </button>
-                    </form>
+                    </form> */}
                     <div className="totalContainer">
                         <div className="totalTop">
                             <h2>Valor total:</h2>
