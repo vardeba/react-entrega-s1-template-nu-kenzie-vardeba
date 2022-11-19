@@ -1,6 +1,7 @@
 import React from "react";
-import "../../index.css";
 import { Header } from "./Header";
+import "../../index.css";
+import "../../styles/buttons.css";
 import "./styles.css";
 
 export const HomePage = () => {
@@ -9,54 +10,82 @@ export const HomePage = () => {
             <Header />
             <main className="mainContainer container">
                 <aside>
-                    <form action="">
+                    <form>
                         <label htmlFor="">Descrição</label>
                         <input
+                            className="inputDescription"
                             type="text"
                             placeholder="Digite aqui sua descrição"
                         />
-                        <p>Ex: Compra de roupas</p>
-                        <div>
-                            <div>
+                        <p className="exemple">Ex: Compra de roupas</p>
+                        <div className="valueTypeOfValue">
+                            <div className="valueLabelInput">
                                 <label htmlFor="">Valor</label>
                                 <input type="text" placeholder="R$" />
                             </div>
-                            <div>
+                            <div className="typeOfValue">
                                 <label htmlFor="">Tipo de valor</label>
                                 <select name="" id="">
                                     <option value="Entrada" selected>
                                         Entrada
                                     </option>
-                                    <option value="Saída">Despesa</option>
+                                    <option value="Despesa">Despesa</option>
                                 </select>
                             </div>
                         </div>
+                        <button className="insertValue btn_primary_large">
+                            Inserir valor
+                        </button>
                     </form>
+                    <div className="totalContainer">
+                        <div className="totalTop">
+                            <h2>Valor total:</h2>
+                            <span>R$ 0,00</span>
+                        </div>
+                        <p>O valor se refere ao saldo</p>
+                    </div>
                 </aside>
                 <section>
                     <div className="financialResume">
                         <div className="resumeHeader">
-                            <h2>Resumo financeiro</h2>
+                            <h3>Resumo financeiro</h3>
                             <div className="resumeHeaderButtons">
-                                <button>Todos</button>
-                                <button>Entradas</button>
-                                <button>Despesas</button>
+                                <button className="resumeHeaderButtonAll btn_primary_small">
+                                    Todos
+                                </button>
+                                <button className="resumeHeaderButtonEntries btn_gray_small">
+                                    Entradas
+                                </button>
+                                <button className="resumeHeaderButtonExpenses btn_gray_small">
+                                    Despesas
+                                </button>
                             </div>
                         </div>
                         <div className="noCards">
-                            <h1>Você ainda não possui nenhum lançamento</h1>
+                            <p>Você ainda não possui nenhum lançamento</p>
                             <img src="#" alt="NoCardsImg" />
                         </div>
                         <div className="financialCards">
-                            <ul>
-                                <li>
+                            <ul className="cards">
+                                <li className="card cardExpenses">
                                     <div className="cardTop">
-                                        <h2>Description Value</h2>
-                                        <div>
-                                            <p>R$ 0,00</p>
+                                        <h2>Compra - Camiseta Preta</h2>
+                                        <div className="valueTrash">
+                                            <p>R$ 60,00</p>
                                             <button className="btn_trash"></button>
                                         </div>
                                     </div>
+                                    <span>Despesa</span>
+                                </li>
+                                <li className="card cardEntries">
+                                    <div className="cardTop">
+                                        <h2>Salário - Mês Dezembro</h2>
+                                        <div className="valueTrash">
+                                            <p>R$ 6.600,00</p>
+                                            <button className="btn_trash"></button>
+                                        </div>
+                                    </div>
+                                    <span>Entrada</span>
                                 </li>
                             </ul>
                         </div>
