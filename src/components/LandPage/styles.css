@@ -1,0 +1,49 @@
+.landPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.landPageDescription {
+    width: 21.6875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.landPageDescription img {
+    margin-bottom: 2rem;
+}
+
+.landPageDescription h1 {
+    margin-bottom: 2rem;
+    font-size: var(--landPageTitle);
+    font-weight: var(--landPageWeight);
+    line-height: var(--line-height);
+    color: var(--white);
+}
+
+.landPageDescription p {
+    margin-bottom: 2rem;
+    font-size: var(--headline);
+    font-weight: var(--font-weight-4);
+    line-height: var(--line-height);
+    color: var(--white);
+}
+
+.landPageDescription button {
+    height: var(--button-height-1);
+    width: 15.0625rem;
+    border: none;
+    border-radius: var(--radius);
+    background-color: var(--color-primary-1);
+    font-size: var(--headline);
+    font-weight: var(--font-weight-3);
+    color: var(--white);
+}
+
+.landPageDescription button:hover {
+    background-color: var(--color-primary-2);
+}
