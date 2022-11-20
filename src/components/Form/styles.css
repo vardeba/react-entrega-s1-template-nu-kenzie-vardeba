@@ -5,6 +5,7 @@ form {
     border: 0.0625rem solid var(--gray-2);
     border-radius: var(--radius);
     padding: 2.375rem 1.5rem;
+    margin-top: 2.4375rem;
     margin-bottom: 1rem;
 }
 

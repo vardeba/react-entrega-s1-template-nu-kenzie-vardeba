@@ -3,8 +3,7 @@ import "../../index.css";
 import "../../styles/buttons.css";
 import "./styles.css";
 
-export const Card = ({ transaction, index }) => {
-    console.log(transaction);
+export const Card = ({ transaction, index, handleListTransactions }) => {
     return (
         <div>
             <li
@@ -29,7 +28,10 @@ export const Card = ({ transaction, index }) => {
                                       currency: "BRL",
                                   })}
                         </p>
-                        <button className="btn_trash"></button>
+                        <button
+                            className="btn_trash"
+                            onClick={() => handleListTransactions(transaction)}
+                        ></button>
                     </div>
                 </div>
                 <span>

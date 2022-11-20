@@ -1,9 +1,9 @@
 import React from "react";
-import "../../../index.css";
-import "../../../styles/buttons.css";
+import "../../index.css";
+import "../../styles/buttons.css";
 import "./styles.css";
 
-import NuKenzieBlackLogo from "../../../assets/nukenzie_black_logo.svg";
+import NuKenzieBlackLogo from "../../assets/nukenzie_black_logo.svg";
 
 export const Header = () => {
     return (
