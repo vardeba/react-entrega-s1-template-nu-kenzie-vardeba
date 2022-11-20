@@ -5,6 +5,7 @@ import "../../styles/buttons.css";
 import "./styles.css";
 import { Form } from "../Form";
 import { List } from "../List";
+import { TotalMoney } from "../TotalMoney";
 
 export const HomePage = ({ listTransactions, setListTransactions }) => {
     return (
@@ -43,13 +44,14 @@ export const HomePage = ({ listTransactions, setListTransactions }) => {
                             Inserir valor
                         </button>
                     </form> */}
-                    <div className="totalContainer">
+                    <TotalMoney listTransactions={listTransactions} />
+                    {/* <div className="totalContainer">
                         <div className="totalTop">
                             <h2>Valor total:</h2>
                             <span>R$ 0,00</span>
                         </div>
                         <p>O valor se refere ao saldo</p>
-                    </div>
+                    </div> */}
                 </aside>
                 <section>
                     <div className="financialResume">
