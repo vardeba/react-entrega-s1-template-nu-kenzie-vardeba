@@ -4,6 +4,7 @@ import "../../index.css";
 import "../../styles/buttons.css";
 import "./styles.css";
 import { Form } from "../Form";
+import { List } from "../List";
 
 export const HomePage = ({ listTransactions, setListTransactions }) => {
     return (
@@ -71,7 +72,8 @@ export const HomePage = ({ listTransactions, setListTransactions }) => {
                             <img src="#" alt="NoCardsImg" />
                         </div>
                         <div className="financialCards">
-                            <ul className="cards">
+                            <List listTransactions={listTransactions} />
+                            {/* <ul className="cards">
                                 <li className="card cardExpenses">
                                     <div className="cardTop">
                                         <h2>Compra - Camiseta Preta</h2>
@@ -92,7 +94,7 @@ export const HomePage = ({ listTransactions, setListTransactions }) => {
                                     </div>
                                     <span>Entrada</span>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </section>
