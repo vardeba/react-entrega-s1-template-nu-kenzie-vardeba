@@ -2,6 +2,7 @@ form {
     display: flex;
     flex-direction: column;
     width: 22.6875rem;
+    max-width: 100%;
     border: 0.0625rem solid var(--gray-2);
     border-radius: var(--radius);
     padding: 2.375rem 1.5rem;
@@ -62,6 +63,12 @@ form label {
     color: var(--gray-3);
 }
 
+.inputValue {
+    background-image: url(../../assets/brl_icon.svg);
+    background-repeat: no-repeat;
+    background-position: 6rem;
+}
+
 .typeOfValue {
     width: 8rem;
     height: 4.9375rem;
@@ -79,4 +86,12 @@ form label {
     font-weight: var(--font-weight-4);
     color: var(--gray-4);
     cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
 }

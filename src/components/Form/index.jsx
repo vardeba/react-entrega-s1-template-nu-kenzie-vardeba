@@ -34,8 +34,9 @@ export const Form = ({ addTransaction }) => {
                         <label htmlFor="value">Valor</label>
                         <input
                             id="value"
-                            type="text"
-                            placeholder="R$"
+                            className="inputValue"
+                            type="number"
+                            placeholder="0,00"
                             required
                             value={transactionValue}
                             onChange={(event) =>
@@ -65,15 +66,25 @@ export const Form = ({ addTransaction }) => {
                 <button
                     className="insertValue btn_primary_large"
                     onClick={() => {
-                        transaction = {
-                            description: transactionDescription,
-                            type: transactionType,
-                            value:
-                                transactionType === "entrada"
-                                    ? parseFloat(transactionValue)
-                                    : parseFloat(transactionValue) * -1,
-                        };
-                        addTransaction(transaction);
+                        if (
+                            transactionDescription !== "" &&
+                            (transactionType === "entrada" ||
+                                transactionType === "saída") &&
+                            transactionValue !== ""
+                        ) {
+                            transaction = {
+                                description: transactionDescription,
+                                type: transactionType,
+                                value:
+                                    transactionType === "entrada"
+                                        ? parseFloat(transactionValue)
+                                        : parseFloat(transactionValue) * -1,
+                            };
+                            addTransaction(transaction);
+                            setTransactionDescription("");
+                            setTransactionValue("");
+                            setTransactionType("Selecione");
+                        }
                     }}
                 >
                     Inserir valor

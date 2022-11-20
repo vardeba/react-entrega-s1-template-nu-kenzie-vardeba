@@ -1,8 +1,11 @@
 .landPage {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    background-color: var(--gray-4);
 }
 
 .landPageDescription {
@@ -46,4 +49,14 @@
 
 .landPageDescription button:hover {
     background-color: var(--color-primary-2);
+}
+
+@media (max-width: 72.49rem) {
+    .landPage {
+        width: 23.4375rem;
+        margin: 0 auto;
+    }
+    .landPageIlustration {
+        display: none;
+    }
 }

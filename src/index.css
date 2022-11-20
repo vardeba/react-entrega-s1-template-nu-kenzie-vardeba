@@ -91,13 +91,16 @@ code {
 }
 
 .container {
-    width: 23.4375rem;
+    width: 61.4375rem;
+    /* width: 23.4375rem; */
     margin: 0 auto;
     padding: 0 0.9375rem;
 }
 
-@media (min-width: 72.49rem) {
+@media (max-width: 72.49rem) {
     .container {
-        width: 61.4375rem;
+        width: 23.4375rem;
+
+        /* width: 61.4375rem; */
     }
 }

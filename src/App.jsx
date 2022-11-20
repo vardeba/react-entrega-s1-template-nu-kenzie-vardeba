@@ -4,10 +4,10 @@ import { HomePage } from "./components/HomePage";
 import { LandPage } from "./components/LandPage";
 
 export const App = () => {
-    const [listTransactions, setListTransactions] = useState([
-        { description: "Salário recebido", type: "entrada", value: 2500 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-    ]);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const [listTransactions, setListTransactions] = useState([]);
+    const [filterList, setFilterList] = useState("todos");
 
     const addTransaction = (newTransaction) => {
         setListTransactions([...listTransactions, newTransaction]);
@@ -17,19 +17,24 @@ export const App = () => {
         const newListTransactions = listTransactions.filter(
             (element) => element !== transaction
         );
-        console.log(newListTransactions);
         setListTransactions(newListTransactions);
     };
 
     return (
         <div className="App">
             <div className="App-header">
-                <HomePage
-                    listTransactions={listTransactions}
-                    setListTransactions={setListTransactions}
-                    addTransaction={addTransaction}
-                    handleListTransactions={handleListTransactions}
-                />
+                {!isLoggedIn ? (
+                    <LandPage setIsLoggedIn={setIsLoggedIn} />
+                ) : (
+                    <HomePage
+                        filterList={filterList}
+                        setFilterList={setFilterList}
+                        setIsLoggedIn={setIsLoggedIn}
+                        listTransactions={listTransactions}
+                        addTransaction={addTransaction}
+                        handleListTransactions={handleListTransactions}
+                    />
+                )}
             </div>
         </div>
     );
