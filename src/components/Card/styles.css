@@ -1,0 +1,42 @@
+.card {
+    height: 5.5rem;
+    background-color: var(--gray-1);
+    border-radius: var(--radius) 0 0 var(--radius);
+    padding: 0.5rem 1.125rem;
+    transition: 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.cardEntries {
+    border-left: 0.5rem solid var(--color-secondary-1);
+}
+
+.cardExpenses {
+    border-left: 0.5rem solid var(--gray-2);
+}
+
+.card:hover {
+    transform: translateY(-0.125rem);
+    background-color: var(--white);
+    box-shadow: 0px 4px 42px -12px rgba(0, 0, 0, 0.25);
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card h2 {
+    font-size: var(--headline);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height);
+    color: var(--gray-4);
+}
+
+.valueTrash {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 9.9375rem;
+    display: flex;
+    justify-content: space-between;
+}
