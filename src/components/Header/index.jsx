@@ -5,12 +5,15 @@ import "./styles.css";
 
 import NuKenzieBlackLogo from "../../assets/nukenzie_black_logo.svg";
 
-export const Header = () => {
+export const Header = ({ setIsLoggedIn }) => {
     return (
         <header className="homePageHeader">
             <div className="headerLogoButton container">
                 <img src={NuKenzieBlackLogo} alt="Nu Kenzie Logo" />
-                <button className="homePageHeaderButton btn_gray_small">
+                <button
+                    onClick={() => setIsLoggedIn(false)}
+                    className="homePageHeaderButton btn_gray_small"
+                >
                     Inicio
                 </button>
             </div>

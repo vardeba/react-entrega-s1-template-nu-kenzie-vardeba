@@ -1,0 +1,12 @@
+.noCards {
+    display: flex;
+    flex-direction: column;
+}
+
+.noCards p {
+    font-size: var(--button-height-3);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height);
+    color: var(--gray-4);
+    margin-bottom: 1.75rem;
+}
